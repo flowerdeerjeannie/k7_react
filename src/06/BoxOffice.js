@@ -8,7 +8,7 @@ export default function BoxOffice() {
   return (
     <div>
           <ul>
-        {tags}
+        {tags}  
           </ul>
     </div>
   )
