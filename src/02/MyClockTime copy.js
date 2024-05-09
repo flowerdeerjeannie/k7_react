@@ -1,20 +1,16 @@
 import './MyClock.css'; 
 import style from './My.module.css';
-import { useState, useEffect } from 'react';
+//mymodule.css라는데서의 c1 설정해논거를 가지고 오고 싶어서 import를 했어!
 
 function MyClockTime() {
      const now = new Date(); 
      const clock = now.toLocaleTimeString();  
      const gubun = clock.substring(0, 2);
      const st = {color:"pink", fontWeight:"bold"};
-     const [ctime, setCtime] = useState(new Date());
 
-     //setInterval은 초마다 도는 함수, 이걸 돌려서 셋타임이 설정될수있도록.
-     useEffect(()=>{
-          setInterval(()=>{
-               setCtime(new Date())
-          }, 1000);
-     },[]);
+     // let divStyle;
+     // if (gubun == '오전') divStyle= "div1"
+     // else divStyle="div2"
 
      return (
           <>
@@ -27,7 +23,7 @@ function MyClockTime() {
                // <div style={{color:"yellow", fontWeight:"bold"}}>
                // 위에 import해준거 style이라서 거기서 c1을 잡아서 빼줌
                <div className={style.c1}>
-                    {ctime.toLocaleString()}
+                    {clock}
                </div>
           }
           </>

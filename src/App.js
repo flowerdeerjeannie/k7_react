@@ -1,5 +1,5 @@
 import './App.css';
-// import MyClock from './02/MyClock';
+import MyClock from './02/MyClock';
 // import MyDiv from './03/MyDiv';
 import { IoHomeSharp } from "react-icons/io5";
 // import logoimg from './logo.svg';
@@ -22,7 +22,8 @@ function App() {
                          {/* <MyDiv /> */}
                          {/* <MyList /> */}
                          {/* {<Lotto />} */}
-                         <BoxOffice />
+                         {/* <BoxOffice /> */}
+                         < MyClock />
                     </main>
                <footer className='flex justify-center items-center h-20 bg-slate-600 text-purple-50'>
                     ⓒ 2024 Lee ji eun, All rights reserved.
