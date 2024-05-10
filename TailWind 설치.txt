@@ -1,0 +1,19 @@
+보아라~~~
+
+
+1. 테트리스에서 es7 쳐서 제일위에있는거 다운받음 
+2. 터미널에서 ctrl+c 눌러가지고 y 하고 종료한 상태에서 npm install -D tailwindcss 엔터 
+3. json 어쩌구에서 맨밑에 테일윈즈 버전 맞게 됐는지 확인함
+4. 또 터미널에서 npx tailwindcss init 친다. 
+5. tailwind.config.js 가서 content 안에 "./src/**/*.{js,jsx,ts,tsx}"
+한다 
+6. index.css 가서 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+를 맨위에 넣는다 
+
+7.터미널창에 npm install react-icon --save
+아이콘 설치
+이런거 하기전에 ctrl+c 해서 y 하고 일괄작업 끝낸상태에서 npm 쳐주기 

@@ -6,6 +6,7 @@ import { IoHomeSharp } from "react-icons/io5";
 import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import BoxOffice from './06/BoxOffice';
+import FoodMain from './07/FoodMain';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
                          {/* <MyList /> */}
                          {/* {<Lotto />} */}
                          {/* <BoxOffice /> */}
-                         < MyClock />
+                         {/* < MyClock /> */}
+                         <FoodMain />
                     </main>
                <footer className='flex justify-center items-center h-20 bg-slate-600 text-purple-50'>
                     ⓒ 2024 Lee ji eun, All rights reserved.
