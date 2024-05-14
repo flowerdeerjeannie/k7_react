@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 export default function FoodMain() {
      const [c1List, setC1List] = useState([]);
+
      //c1List를 [배열]로 초기값을 줘야 하나가 아닌 그에 해당하는 여러개가 배열형식처럼 두두두 나올수있음.
 
      let c1 = FoodData.map(item => item['운영주체 분류'])

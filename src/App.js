@@ -7,6 +7,7 @@ import MyList from './04/MyList';
 import Lotto from './05/Lotto';
 import BoxOffice from './06/BoxOffice';
 import FoodMain from './07/FoodMain';
+import TrafficMain from './08/TrafficMain';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
                          {/* {<Lotto />} */}
                          {/* <BoxOffice /> */}
                          {/* < MyClock /> */}
-                         <FoodMain />
+                         {/* <FoodMain /> */}
+                         <TrafficMain />
                     </main>
                <footer className='flex justify-center items-center h-20 bg-slate-600 text-purple-50'>
                     ⓒ 2024 Lee ji eun, All rights reserved.
