@@ -10,6 +10,8 @@ export default function TrafficMain() {
   const [c2, setC2 ] = useState();      //중분류만 잡아주기 - 버튼이랑다르다는거!
   const [c2Tag, setC2Tag] = useState(); //중분류 버튼
   const [c2Sel, setC2Sel] = useState(); //선택된 중분류
+  
+  const [info, setInfo] = useState();
 
   const handleC1Select = (item) => {
     setC1Sel(item);
@@ -74,7 +76,6 @@ export default function TrafficMain() {
   
   //중분류가 만들어졌을 때 
   useEffect(()=>{
-    console.log("대분류선택:", c1Sel)
     if (!c2) return;
     let tm =c2.map((item)=><ButtonC caption={item}
                                     key = {item}
@@ -83,6 +84,17 @@ export default function TrafficMain() {
     setC2Tag(tm)
     // // if문을 통하여 c2가 없을경우의 return을 해주어야 오류가 안남***
   },[c2]);
+
+  useEffect(()=>{
+    console.log("대분류선택:", c1Sel)
+    console.log("중분류선택:", c2Sel)
+    let tm = tdata.filter(item => item['사고유형_대분류'] === c1Sel &&
+                                  item['사고유형_중분류']===c2Sel);
+    tm = tm[0];
+    // object로 풀리게하는거
+    setInfo(tm['사고건수'])
+
+  },[c2Sel]);
 
   return (
     <div className="w-10/12 h-full flex flex-col  justify-start items-start">
@@ -97,6 +109,9 @@ export default function TrafficMain() {
         <div className="w-3/4 flex">
           {c2Tag}
         </div>
+      <div className="w-full flex justify-between items-center my-10 p-2">
+          {parseInt(info).toLocaleString()}
+      </div>
       </div>
     </div>
   )
