@@ -97,7 +97,7 @@ export default function TrafficMain() {
   },[c2Sel]);
 
   return (
-    <div className="w-10/12 h-full flex flex-col  justify-start items-start">
+    <div className="w-10/12 h-full flex flex-col justify-start items-start">
       <div className="w-full flex justify-between items-center my-10 p-2">
         <div className="w-1/4 justify-start items-center">교통사고 대분류</div>
         <div className="w-3/4 flex">
