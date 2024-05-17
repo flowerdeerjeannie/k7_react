@@ -9,6 +9,8 @@ export default function MyRef() {
      const x1 = useRef();
      const x2 = useRef();
      const x3 = useRef();
+     //ref는 가지고 있다가 랜더링이 되면 가지고 있던 값을 뱉는거고
+     //state는 변할 때마다 값을 보여주는거고
 
      const handleClickComp = () =>{
           cVal++;
@@ -45,12 +47,14 @@ export default function MyRef() {
      useEffect(()=>{
           console.log("sVal=", sVal)
      },[sVal])
+
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="h-20 p-5 m-5 font-bold text-xl ">
           <span> 컴포넌트 변수 : {cVal} </span>
           <span className="mx-5"> state 변수 : {sVal} </span>
-          <span> ref 변수 : {rVal.current} </span>
+          <span> ref 변수 : {rVal.current} </span> 
+        {/* 그냥 {rval}로 넣으면 안되고 뒤에 current붙여주어야 작동함.  */}
       </div>
       <div>
           <span> <ButtonC caption="컴포넌트 변수"
@@ -73,8 +77,8 @@ export default function MyRef() {
           <input type='number' id='txt_2' ref={x2}
           className="bg-gray-50 border border-gray-300 text-gray-900"/>
           <ButtonC caption=" = "
-                          bcolor={"orange"}
-                          handleClick={handleClick} />
+                    bcolor={"orange"}
+                     handleClick={handleClick} />
           <input type='number' id='txt_3' ref={x3}
           className="bg-gray-50 border border-gray-300 text-gray-900"readOnly/>
       </div>
