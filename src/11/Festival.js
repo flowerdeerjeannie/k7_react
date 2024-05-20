@@ -24,13 +24,15 @@ export default function Festival() {
           
           //조건을 만족하는거만 가져와야해서 '필터'를 사용함
           //조건을 걸고 걔만 뽑아낼때!! 이값에 만족하는것만 가져올때
-          //구군명 === 사용자가 선택하는 값 이랑 같을 때의 값만 뽑아내서 
-          let tm = fdata.filter(item => item.GUGUN_NM === selRef.current.value)
+          //구군명 === 사용자가 선택하는 값 이랑 같을 때 => 동래구에 관한 배열 몇개, 남구에 관한 배열 몇 개만 찝어오고
+          //1. 콘솔에 찍힌다고생각하고 그 값만 찝어오는과정을 거치고 나서 2.카드로 맵핑해준다 
+          //그걸 카드로 만들어준다는거임 
+          let tm = fdata.filter(item => item.GUGUN_NM === selRef.current.value) 
                          .map(item => <GalleryCard key={item.LAT}
-                              imgUrl={item.MAIN_IMG_NORMAL}
-                              title={item.TITLE} 
-                              content={item.SUBTITLE} 
-                              spTag={item.MAIN_PLACE} />)
+                                   imgUrl={item.MAIN_IMG_NORMAL}
+                                   title={item.TITLE} 
+                                   content={item.SUBTITLE} 
+                                   spTag={item.MAIN_PLACE} />)
           setCards(tm);
      }
 
@@ -71,7 +73,7 @@ export default function Festival() {
           </form>
           </div>
           <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-               {cards}
+               {fdata && cards}
            </div>
      </div>
   )
