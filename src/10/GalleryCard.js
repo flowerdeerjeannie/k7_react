@@ -10,6 +10,7 @@ export default function GalleryCard({imgUrl, title, content, spTag}) {
      console.log('sptags',sptags)
      return (
           <div className="max-w-sm rounded overflow-hidden shadow-lg">
+               {/* src해서 속성 주소 이렇게 잡아주는거 방법 알고 있기 */}
                <img className="w-full" src={imgUrl.includes('http:') ? 
                                              imgUrl.replace('http:','https:') : imgUrl} 
                                              alt={title}/>

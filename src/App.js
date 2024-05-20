@@ -12,6 +12,7 @@ import TrafficNav from './08_1/TrafficNav';
 import Traffic from './08_1/Traffic';
 import MyRef from './09/MyRef';
 import Gallery from './10/Gallery';
+import Festival from './11/Festival';
 
 function App() {
      return (     //w-full한 후 mx-auto로 중간으로 가게 만들어줌
@@ -34,7 +35,8 @@ function App() {
                          {/* <TrafficNav /> */}
                          {/* <Traffic /> */}
                          {/* <MyRef /> */}
-                         <Gallery />
+                         {/* <Gallery /> */}
+                         <Festival />
                     </main>
                <footer className='flex justify-center items-center h-20 bg-slate-600 text-purple-50'>
                     ⓒ 2024 Lee ji eun, All rights reserved.
