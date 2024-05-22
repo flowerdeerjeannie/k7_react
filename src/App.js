@@ -16,6 +16,8 @@ import Traffic from './08_1/Traffic';
 import MyRef from './09/MyRef';
 import Gallery from './10/Gallery';
 import Festival from './11/Festival';
+import Frcst from "./13/Frcst";
+import FrcstList from "./13/FrcstList";
 // import RouteMain from './12/RouteMain';
 
 function App() {
@@ -44,6 +46,9 @@ function App() {
                     <li className="mr-4">
                          <Link to='/Festival'>축제</Link>
                     </li>
+                    <li className="mr-4">
+                         <Link to='/Frcst'>단기예보</Link>
+                    </li>
                </ul>
                <p><IoHomeSharp className='text-3xl' /></p>
                </header>
@@ -57,6 +62,8 @@ function App() {
                          <Route path='/Gallery' element={<Gallery />} />
                          <Route path='/Traffic' element={<Traffic />} />
                          <Route path='/Festival' element={<Festival />} />
+                         <Route path='/Frcst' element={<Frcst />} />
+                         <Route path='/Frcstlt' element={<FrcstList />} />
                     </Routes>
                          {/* <div className='flex justify-center items-center w-1/4 h-1/2'> 
                               <img src={logoimg} alt='logo' />
@@ -73,7 +80,6 @@ function App() {
                          {/* <MyRef /> */}
                          {/* <Gallery /> */}
                          {/* <Festival /> */}
-                    
                     </main>
                <footer className='flex justify-center items-center h-20 bg-slate-600 text-purple-50'>
                     ⓒ 2024 Lee Jieun, All rights reserved.
