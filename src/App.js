@@ -27,26 +27,26 @@ function App() {
           <header className='flex justify-between items-center text-xl font-bold h-20 px-20 py-10 bg-orange-400 text-purple-50'>
                <p className='text-2xl'>리액트 실습</p>
                <ul className="flex">
-                    <li className="mr-4">
+                    <li className="mr-4  hover:bg-orange-300 p-2">
                          {/* Link to=3000뒤의 주소 */}
                          <Link to='/MyClock'>시계</Link>
                     </li>
-                    <li className="mr-4">
+                    <li className="mr-4 hover:bg-orange-300 p-2">
                          <Link to='/Lotto'>로또</Link>
                     </li>
-                    <li className="mr-4">
+                    <li className="mr-4  hover:bg-orange-300 p-2">
                          <Link to='/BoxOffice'>박스오피스</Link>
                     </li>
-                    <li className="mr-4">
+                    <li className="mr-4  hover:bg-orange-300 p-2">
                          <Link to='/Gallery'>갤러리</Link>
                     </li>
-                    <li className="mr-4">
+                    <li className="mr-4  hover:bg-orange-300 p-2">
                          <Link to='/Traffic'>교통 통계</Link>
                     </li>
-                    <li className="mr-4">
+                    <li className="mr-4  hover:bg-orange-300 p-2">
                          <Link to='/Festival'>축제</Link>
                     </li>
-                    <li className="mr-4">
+                    <li className="mr-4  hover:bg-orange-300 p-2">
                          <Link to='/Frcst'>단기예보</Link>
                     </li>
                </ul>
@@ -64,6 +64,8 @@ function App() {
                          <Route path='/Festival' element={<Festival />} />
                          <Route path='/Frcst' element={<Frcst />} />
                          <Route path='/Frcstlt' element={<FrcstList />} />
+                         {/* Frcst에서 다시 다른 컴포넌트를 불러올거라 하더라도 여기에 Route로 작성해주어야함
+                         다른데서 작성하면 홈이 이 컴포넌트를 찾을수가없다. */}
                     </Routes>
                          {/* <div className='flex justify-center items-center w-1/4 h-1/2'> 
                               <img src={logoimg} alt='logo' />

@@ -5,6 +5,7 @@ import getxy from "./getxy.json";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
+//이 페이지는 페치를 위한 정보를 뽑아내는 페이지. 
 export default function Frcst() {
   const navigate = useNavigate();
   const [ops, setOps] = useState([]); //tm에 의해 정해진 한 지역의 경도,위도 등의 정보배열-ops
@@ -31,6 +32,8 @@ export default function Frcst() {
       alert('날짜와 지역을 선택하세요');
       return;
     }
+    //버튼이 클릭되고나면 navigate이하로 이동합니다. 페치없습니데이
+    //아래에 ${} 값을 다 달고 넘어갑니데이
     navigate(`/Frcstlt?gubun=${gubun}&x=${x}&y=${y}&dt=${inRef.current.value.replaceAll('-','')}&area=${area}`)
   }
 
