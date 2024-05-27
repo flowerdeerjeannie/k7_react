@@ -6,8 +6,7 @@ import getcode from "./getcode.json";
 
 export default function FrcstList() {
   // navigate(`/Frcstlt?gubun=${gubun}&x=${x}&y=${y}&dt=${inRef.current.value.replaceAll('-','')}&area=${area}`)
-  
-  //얘는 선택 후에 실제로 그려지는 테이블페이지.
+  //얘는 선택 후에 실제로 그려지는 테이블페이지!!! navigate이후랑 연결된다고 보면됨. 받아주는 페이지 
 
   // URL에서 쿼리 파라미터를 읽기 위해 useSearchParams 훅 사용
   const [sParams] = useSearchParams();

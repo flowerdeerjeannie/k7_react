@@ -19,13 +19,15 @@ import Festival from './11/Festival';
 import Frcst from "./13/Frcst";
 import FrcstList from "./13/FrcstList";
 // import RouteMain from './12/RouteMain';
+import RecoilMain from "./14/RecoilMain";
+import Rest from "./15/Rest";
 
 function App() {
      return (  
      <BrowserRouter>
           <div className="flex flex-col w-full max-w-screen-lg h-screen overflow-y-auto mx-auto">
-          <header className='flex justify-between items-center text-xl font-bold h-20 px-20 py-10 bg-orange-400 text-purple-50'>
-               <p className='text-2xl'>리액트 실습</p>
+          <header className='flex justify-between items-center text-xl font-bold h-20 bg-orange-400 text-purple-50'>
+               <p className='text-xl p-5'>리액트 실습</p>
                <ul className="flex">
                     <li className="mr-4  hover:bg-orange-300 p-2">
                          {/* Link to=3000뒤의 주소 */}
@@ -49,8 +51,15 @@ function App() {
                     <li className="mr-4  hover:bg-orange-300 p-2">
                          <Link to='/Frcst'>단기예보</Link>
                     </li>
+                    <li className="mr-4  hover:bg-orange-300 p-2">
+                         <Link to='/recoil'>Recoil</Link>
+                    </li>
+                    <li className="mr-4  hover:bg-orange-300 p-2">
+                         <Link to='/rest'>Rest</Link>
+                    </li>
+
                </ul>
-               <p><IoHomeSharp className='text-3xl' /></p>
+               <p><IoHomeSharp className='items-center m-5 text-3xl ' /></p>
                </header>
                     <main className='grow flex justify-center items-center'>
                     {/* 메인 안에는 <루트 경로=주소, 엘레멘트={<>} 집어주기 */}
@@ -64,6 +73,8 @@ function App() {
                          <Route path='/Festival' element={<Festival />} />
                          <Route path='/Frcst' element={<Frcst />} />
                          <Route path='/Frcstlt' element={<FrcstList />} />
+                         <Route path='/recoil' element={<RecoilMain />} />
+                         <Route path='/rest' element={<Rest />} />
                          {/* Frcst에서 다시 다른 컴포넌트를 불러올거라 하더라도 여기에 Route로 작성해주어야함
                          다른데서 작성하면 홈이 이 컴포넌트를 찾을수가없다. */}
                     </Routes>
