@@ -20,7 +20,7 @@ export default function ButtonC({caption, bcolor, handleClick}) {
      }
 
      return (
-    <button className={`inline-flex justify-center items-center 
+    <button className={`flex-shrink-0 justify-center items-center 
                          py-3 px-10 m-2
                           text-white font-bold rounded-md
                          ${colorB[bcolor]} ${colorBhover[bcolor]}`}
